@@ -1,26 +1,25 @@
 type MainImageViewerProps = {
-  img: string;
   title: string;
   description: string;
   cost: string;
   id: string;
-  thumbFile: string;
-  largeImgFile: string;
+  image: string;
+  thumbnail: string;
 };
 
 const MainImageViewer = ({
-  img,
   title,
   description,
   cost,
   id,
-  thumbFile,
-  largeImgFile,
+  image,
+  thumbnail,
 }: MainImageViewerProps) => {
+  const imagePath = `/images/large/${image}`;
   return (
     <div id="large">
       <div className="group">
-        <img src={img} alt={title} width="430" height="360" />
+        <img src={imagePath} alt={title} width="430" height="360" />
         <div className="details">
           <p>
             <strong>Title</strong>
@@ -40,11 +39,11 @@ const MainImageViewer = ({
           </p>
           <p>
             <strong>Thumbnail File</strong>
-            {thumbFile}
+            {thumbnail}
           </p>
           <p>
             <strong>Large Image File</strong>
-            {largeImgFile}
+            {image}
           </p>
         </div>
       </div>
