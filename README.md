@@ -1,43 +1,72 @@
-# README #
+# Filmstrip View Template Viewer
 
-This project requires you to develop a website template viewer. The template viewer is modeled after the filmstrip folder view in Windows Explorer.
+This project is a website template viewer modeled after the filmstrip folder view in Windows Explorer. It is developed as a Single Page Application (SPA) using React for the front-end and Node.js/Express for the back-end API.
 
-### Technical Requirements ###
+## Features
 
-* Develop as a Single Page Application
-* Develop both a front-end component and back-end API to retrieve the data.
-* Use a javascript front-end implementation of your choice, some suggestions might be ReactJS, Angular or AngularJS
-* Create a back-end API implementation with NodeJS/Express
+- Display thumbnail images in a filmstrip view below the main large image.
+- A sliding window with 4 thumbnails visible at a time.
+- "Next" and "Previous" links to navigate through the thumbnails.
+- Clicking on a thumbnail displays the corresponding large image along with its metadata.
+- Thumbnails have a border when selected.
 
-### Reference ###
-![Example Filmstrip](https://github.com/techpacker/filmstrip-view/blob/main/images/reference.png)
+## Technical Stack
 
-### Feature Requirements ###
+- Front-end: React, Vite, Axios, Tailwind CSS
+- Back-end: Node.js/Express
+- CSS for styling
 
-* Display the thumbnail images in a filmstrip view below the main large image
-* Set the thumbnail to have a sliding window with 4 thumbnails visible in the window at a time. 
-* Implement a "next" and "previous" link per the styles provided. The sliding window is not circular, when the first 4 thumbnails appear, the previous link should be disabled. When the end of the thumbnail set is reached, the next link should be disabled.
-  Note: The sliding window may not have a total of 4 thumbnails if the total template count is not evenly divisible by 4. There are 15 templates in the reference data.
-* Example: If there are 15 templates total, then the initial view would show 4 thumbnail images with previous disabled, then clicking "Next" would advance to the next 4 images, next would advance to the next 4, and so on. Finally, there wouild only be 3 images in the sliding window with next disabled and previous enabled.
-* When clicking on a thumbnail, the large image corresponding to that thumbnail should appear in the main window, along with the meta data about that template (ID, Cost, Description, Thumbnail File Name, Image File Name)
-* Per the reference styles and html, the thumbnail image should have a border when selected.
+## Installation and Running the Project
 
-### Reference Data ###
+### Prerequisites
 
-* /data/templates.json - Array of templates and meta data
-* /images/large - Large size images of templates
-* /images/thumbnails - Thumbnail images of templates
-* /images/next.png - Button image for next link
-* /images/previous.png - Button image for previous link
-* index.html - reference HTML
-* /style/style.css - reference CSS
+- Node.js (v14 or above)
+- npm (v6 or above)
 
+### Steps
 
-### What if I have questions? ###
+1. **Clone the repository:**
 
-* Take your interpretation of the requirements. As long as your interpretation is defensible.
+   ```bash
+   git clone https://github.com/yourusername/filmstrip-view.git
+   cd filmstrip-view
+   ```
 
-### How do I submit the project? ###
+2. **Set up the server:**
 
-* Submit a URL to a public github/gitlab repo
-* Make sure to include a readme to document any installation steps to run the project
+   ```bash
+   cd server
+   npm install
+   ```
+
+3. **Set up the client:**
+
+   ```bash
+   cd ../client
+   npm install
+   ```
+
+4. **Run the server:**
+
+   ```bash
+   cd ../server
+   npm start
+   ```
+
+   The server should now be running on `http://localhost:8000`.
+
+5. **Run the client:**
+
+   ```bash
+   cd ../client
+   npm start
+   ```
+
+   The client should now be running on `http://localhost:5173`.
+
+## Usage
+
+- Navigate to `http://localhost:5173` in your web browser.
+- You will see the filmstrip view with thumbnails.
+- Use the "Next" and "Previous" buttons to navigate through the thumbnails.
+- Click on a thumbnail to view its large image and metadata.
