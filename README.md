@@ -2,6 +2,9 @@
 
 This project is a website template viewer modeled after the filmstrip folder view in Windows Explorer. It is developed as a Single Page Application (SPA) using React for the front-end and Node.js/Express for the back-end API.
 
+## Screenshot
+![image](https://github.com/AKASH-PRASAD7/filmstrip-view/assets/110546856/541e4ed2-5b3b-4796-9561-5302cffd2d0c)
+
 ## Features
 
 - Display thumbnail images in a filmstrip view below the main large image.
@@ -29,7 +32,6 @@ This project is a website template viewer modeled after the filmstrip folder vie
 
    ```bash
    git clone https://github.com/yourusername/filmstrip-view.git
-   cd filmstrip-view
    ```
 
 2. **Set up the server:**
